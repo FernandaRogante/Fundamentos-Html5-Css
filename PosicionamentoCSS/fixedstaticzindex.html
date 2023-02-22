@@ -1,0 +1,67 @@
+
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    div {
+        margin-left: 30px;
+        text-align: center;
+        border: 2px solid black;
+        position:absolute;
+    }
+    div.um {
+        width: 200px;
+        height: 110px;
+        background-color: #cff;
+        z-index: 2;
+        left:35px ;
+        top: 340px;
+    }
+    div.dois {
+        width: 150px;
+        height: 150px;
+        left: 200px;
+        top: 300px;
+        background-color: #6f9;
+        z-index:1;
+    }
+    div.tres {
+        width: 190px;
+        height: 130px;
+        left: 330px;
+        top:320px;
+        background-color: coral;
+        z-index: 3;
+    }
+    section{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin-top: 300px;
+        margin-left: 40px;
+    }
+   section, p {
+    margin-block: 10px;
+   }
+</style>
+
+<div class="um">1</div>
+
+<div class="dois">2</div>
+
+<div class="tres">3</div>
+
+    
+  <section>
+        <p>
+            <strong> 1- static</strong> -> é o valor inicial ou padrão de posicionamento, os boxes permanecem 
+            como no fluxo normal do documento, sobrescrever o posicionamento anterior.
+        </p>
+    
+        <p>
+            <strong>2 - position:fixed </strong> -> o posicionamento do box peramanece fixo em relação a uma referência
+        </p>
+    
+        <p>
+            <strong>3 - z-index</strong> -> rege o empilhamento de boxe segundo o eixo z, regula a ordem de empilhamento.
+        </p>
+  </section>
