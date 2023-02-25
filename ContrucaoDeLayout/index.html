@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrução de Layout</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        header, h1 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: rgb(14, 14, 133);
+            padding: 10px;
+            font-weight: bold;
+        }
+        nav {
+            padding: 10px;
+            margin-left: 10px;
+        }
+        nav, a {
+            color: rgb(196, 53, 53);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        section {
+            width: 1100px;
+            height: 500px;
+            margin-top: 20px;
+            margin-left: 30px;
+
+        }
+        footer {
+            padding: 10px;
+            margin-top: 515px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: rgb(34, 34, 92);
+            color: white;
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+   
+        <header>
+            <h1>Construção de Layout</h1>
+        </header>
+        <nav>
+            <a href="introducao.html">001 - Introdução</a>|
+        </nav>
+        <section id="conteudo">
+    
+        </section>
+        <footer>
+             livro Fundamentos de Html e Css
+        </footer>
+        <script>
+            document.querySelectorAll('a').forEach(link => {
+                const conteudo = document.getElementById('conteudo')
+    
+                link.onclick = function(e) {
+                    e.preventDefault()
+                    fetch(link.href)
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
+                }
+            })
+        </script>
+  
+</body>
+</html>
